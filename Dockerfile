@@ -6,6 +6,6 @@ RUN gradle assemble
 
 FROM openjdk:11-slim
 WORKDIR /app
-COPY --from=build /dist/build/libs/immoapp-backend.jar app.jar
+COPY --from=build /dist/build/libs/test-rest-api.jar app.jar
 EXPOSE 8080
 CMD ["java", "-jar", "app.jar"]
